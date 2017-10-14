@@ -35,7 +35,7 @@ export class DataService {
         "shipping_details": "charges for shipping $18",
         "customer_reviews": "  yep...those were the pros above...basically this guitar;I guess it might be okay if you need something that looks and feels like a guitar;hmm...well, hit it hard and it chips...no finish flaws though;the tuners suck so bad it's hard to describe...tuning it is a real pain...but it doesn't go out too quickly I guess... ; just to practice on if you don't care what it sounds like at all... ",
         "price": 179.99,
-        "image_path": "../../assets/guitarimages/3.jpg",
+        "image_path": "../../assets/guitarimages/3.png",
         "stock_availability": true,
         "no_of_items": 14
       },
@@ -44,7 +44,7 @@ export class DataService {
         "shipping_details": "charges for shipping $20",
         "customer_reviews": "It's got a fatter sound to it than a standard strat for obvious reasons.; I only have a couple complaints. First of all, there's a slight buzzing problem on the sixth string; especially if you're not pressing hard. Also, the strings that came on it were very low quality; On several strings I couldn't even get a note below the 12th fret; but I put Elixirs on it and that's fixed.  ",
         "price": 150.00,
-        "image_path": "../../assets/guitarimages/4.png",
+        "image_path": "../../assets/guitarimages/4.jpg",
         "stock_availability": true,
         "no_of_items": 10
       },

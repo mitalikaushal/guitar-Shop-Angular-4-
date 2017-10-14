@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Guitar } from '../../models/Guitar';
-//import { DataService } from '../../services/data.service';
+import { SessionService } from '../../services/session.service';
+import { Client } from '../../models/Client';
 
 @Component({
   selector: 'app-order-details',
@@ -8,11 +9,18 @@ import { Guitar } from '../../models/Guitar';
   styleUrls: ['./order-details.component.css']
 })
 export class OrderDetailsComponent implements OnInit {
-@Input('guitar') guitars: Guitar;
-  constructor() { }
+  guitar: Guitar;
+  client: Client = {
+    firstname : '',
+    lastname: '',
+    cc: '' ,
+    email: '',
+    phone: '',
+  }
+  constructor( public sessionservice: SessionService) { }
 
   ngOnInit() {
-   
+    this.guitar = this.sessionservice.sendObject();
   }
-
+  
 }

@@ -24,8 +24,7 @@
         </div>
         <hr>
       </div> 
-      <button routerLink = "/order-details" class="btn btn-success btn-block">Buy</button>
-      <app-order-details  [guitar] = "guitars[index]"></app-order-details>
+      <button routerLink = "/order-details" class="btn btn-success" (click) = "sendObject()">Buy</button>
     </div>
     <div class="col-lg-3">
         <button class="w3-button w3-display-right" (click) = "increment()" *ngIf = "index != 6">&#10095;</button></div>  

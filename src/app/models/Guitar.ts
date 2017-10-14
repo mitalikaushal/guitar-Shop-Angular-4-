@@ -1,5 +1,5 @@
 export interface Guitar {
-    product_description:string;
+   product_description:string;
    shipping_details:string;
    customer_reviews:string;
    price:number;

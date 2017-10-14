@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService } from '../../services/data.service';
 import { Guitar } from '../../models/Guitar';
+import { SessionService } from '../../services/session.service';
 
 @Component({
   selector: 'app-product',
@@ -13,7 +14,7 @@ export class ProductComponent implements OnInit {
   index:number = 0;
   
   //injecting dataservice dependency
-  constructor( public dataservice: DataService) { }
+  constructor( public dataservice: DataService, public sessionservice: SessionService) { }
 
   ngOnInit() {
     //calling getData() method through dataservice which returns the whole guitars 
@@ -28,6 +29,10 @@ export class ProductComponent implements OnInit {
   increment(){
     this.index = this.index+1;
     console.log(this.index);
-    
   }
+  //on clicking on buy this function will send the current object to session service
+  sendObject(){
+    this.sessionservice.recieveObject(this.guitars[this.index]);
+  }
+
 }
