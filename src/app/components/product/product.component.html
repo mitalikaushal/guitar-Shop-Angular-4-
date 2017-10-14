@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+        <button class="w3-button w3-display-left" (click) = "decrement()" *ngIf = "index != 0">&#10094;</button>
+    </div>
+    <div class="col-lg-6" >
+      <div id="productImg">
+        <img src={{guitars[index].image_path}}>
+        <br>
+        <hr>
+        <a  href="#" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#productInfo"><i class="fa fa-plus"> Product Info</i></a>
+        <div id="productInfo" class="collapse">
+          {{guitars[index].product_description}}
+        </div>
+        <br>
+        <a  href="#" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#shippingInfo"><i class="fa fa-plus"> Shipping Info</i></a>
+        <div id="shippingInfo" class="collapse">
+          {{guitars[index].shipping_details}}
+        </div>
+        <br>
+        <a  href="#" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#customerReview"><i class="fa fa-plus"> Customer Review</i></a>
+        <div id="customerReview" class="collapse">
+          {{guitars[index].customer_reviews}}
+        </div>
+        <hr>
+      </div> 
+      <button routerLink = "/order-details" class="btn btn-success btn-block">Buy</button>
+      <app-order-details  [guitar] = "guitars[index]"></app-order-details>
+    </div>
+    <div class="col-lg-3">
+        <button class="w3-button w3-display-right" (click) = "increment()" *ngIf = "index != 6">&#10095;</button></div>  
+  </div>
+</div>
