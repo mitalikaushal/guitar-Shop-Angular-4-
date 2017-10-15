@@ -16,6 +16,7 @@ export class ConfirmationComponent implements OnInit {
   index:number;
   order:number;
 
+//injecting services
   constructor(
     public sessionservice: SessionService,
     public router: Router,
@@ -24,10 +25,12 @@ export class ConfirmationComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    //getting specific guitar selected
+    //getting specific guitar's index 
     this.index = this.activatedroute.snapshot.params['index'];
+    //getting specific guitar on calling function which is in dataservice
    this.guitar = this.dataservice.getSpecificData(this.index);
-   //this.guitar = this.sessionservice.getClientDetails();
+   //fetching the order from URL
+   this.order = this.activatedroute.snapshot.params['order'];
  }
 
 }

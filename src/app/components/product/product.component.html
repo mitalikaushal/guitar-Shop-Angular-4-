@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-3">
-        <button class="w3-button w3-display-left" (click) = "decrement()" *ngIf = "index != 0">&#10094;</button>
+        <button style="background-color:rgb(0, 0, 0);color:azure; height:150px; width:30%" class="w3-button w3-display-left" (click) = "decrement()" *ngIf = "index != 0">&#10094;</button>
     </div>
     <div class="col-lg-6" >
       <div id="productImg">
@@ -27,6 +27,6 @@
       <button [routerLink] = "['/order-details/'+index]" class="btn btn-success" (click) = "sendObject()">Buy</button>
     </div>
     <div class="col-lg-3">
-        <button class="w3-button w3-display-right" (click) = "increment()" *ngIf = "index != 6">&#10095;</button></div>  
+        <button style="background-color:rgb(0, 0, 0);color:azure; height:150px; width:30%" class="w3-button w3-display-right" (click) = "increment()" *ngIf = "index != 6">&#10095;</button></div>  
   </div>
 </div>

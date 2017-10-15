@@ -4,3 +4,9 @@
 form div{
     text-align: center;
 }
+#phone {
+    margin-left: 35px;
+}
+#email {
+    margin-left: 40px;
+}

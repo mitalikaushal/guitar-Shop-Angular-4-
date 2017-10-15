@@ -20,8 +20,20 @@ const appRoutes: Routes = [
   {path: '', component:HomeComponent},
   {path: 'guitars', component:GuitarsComponent},
   {path: 'order-details/:index', component:OrderDetailsComponent},
-  {path: 'confirmation/:index', component:ConfirmationComponent}
+  {path: 'confirmation/:index/:order', component:ConfirmationComponent}
 ]
+
+// const appRoutes: Routes = [
+//   {
+//     path:'' , 
+//     children: [ 
+//       {path: '', component:HomeComponent},
+//       {path: 'guitars', component:GuitarsComponent},
+//       {path: 'order-details/:index', component:OrderDetailsComponent},
+//     ],
+//     component:HomeComponent },
+//     {path:'confirmation/:index/:order', component:ConfirmationComponent}
+// ];
 
 @NgModule({
   declarations: [

@@ -18,7 +18,7 @@ export class DataService {
         "shipping_details": "charges for shipping $20",
         "customer_reviews": " Hmm...well, sounds like a tele at low volumes...the higher the volume, the worse the squeals;like a pig really...ah well, it's a cheap guitar...also tends to rattle above the 10th fret; on the 1st and 2nd strings (to the point of fretting out completely); and on the 5 and 6 stings on the 1st through 3rd frets...weird...action; settings help, but not much...hard to set the intonation as well (read, damn near impossible)... ",
         "price": 204.99,
-        "image_path": "../../assets/guitarimages/1.png",
+        "image_path": "../../assets/guitarimages/1.jpg",
         "stock_availability": true,
         "no_of_items": 10
       },
@@ -54,7 +54,7 @@ export class DataService {
         "shipping_details": "charges for shipping $15",
         "customer_reviews": "  Nice tone with use of quality strings, highs are clear and lows are decent; in depth considering this really is a beginner's guitar; Set up must be with quality strings.  No apparent flaws, guitar now 11 years old and still sounds great; Finish is still impeccable. I'm really surprised as I did not expect it to last this long; No apparent flaws, guitar now 11 years old and still sounds great. Finish is still impeccable",
         "price": 125.50,
-        "image_path": "../../assets/guitarimages/5.jpg",
+        "image_path": "../../assets/guitarimages/5.png",
         "stock_availability": true,
         "no_of_items": 15
       },

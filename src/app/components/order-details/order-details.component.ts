@@ -19,6 +19,7 @@ export class OrderDetailsComponent implements OnInit {
     email: '',
     phone: '',
   }
+  order:number;
   index:number;
   onClickReview:boolean = false;
   constructor(
@@ -35,8 +36,11 @@ export class OrderDetailsComponent implements OnInit {
     console.log(this.index);
      //this will ask data service for the whole object of the specific index
      this.guitar= this.dataservice.getSpecificData(this.index);
-  
+     this.randomNumber();
   }
-  
+  //randome number for order
+ randomNumber(){
+  this.order = Math.floor(Math.random()*100000);
+ }
   
 }

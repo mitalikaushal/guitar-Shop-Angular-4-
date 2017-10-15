@@ -1,7 +1,8 @@
+<br>
 <div class="container">
   <div class="row">
     <div class="col-lg-6" id="image">
-      <h2>Guitar Image: </h2>
+      <h2>Guitar Selected: </h2>
       <img src={{guitar.image_path}}>
     </div>
     <div class="col-lg-6">
@@ -10,6 +11,7 @@
       {{guitar.product_description}}
     </div>
   </div>
+  <hr>
   <div class="row">
     <div class="col-3"></div>
     <div class="col-6">
@@ -65,10 +67,14 @@
             <p><strong>Phone No: </strong>{{client.phone}} </p>
             <hr>
             <button class="btn btn-danger" (click) = "onClickReview = !onClickReview">Edit</button>
-            <button [routerLink] = "['/confirmation/'+index]" class="btn btn-success float-right" >Buy</button>
+            <button [routerLink] = "['/confirmation', index, order]" class="btn btn-success float-right" >Buy</button>
           </div>
         </div>
       </div>
     <div class="col-3"></div>
   </div>
 </div>
+<br>
+<p style="background-color:rgb(22, 22, 22); color:white;text-align:right">COPYRIGHT: &copy;mitali kaushal</p>
+
+
