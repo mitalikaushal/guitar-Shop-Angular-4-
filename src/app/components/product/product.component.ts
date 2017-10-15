@@ -23,12 +23,12 @@ export class ProductComponent implements OnInit {
   // on click on decrement arrow this function will call
   decrement(){
     this.index = this.index-1;
-    console.log(this.index);
+   // console.log(this.index);
   }
   //on click on increment arrow this function will be called
   increment(){
     this.index = this.index+1;
-    console.log(this.index);
+    //console.log(this.index);
   }
   //on clicking on buy this function will send the current object to session service
   sendObject(){

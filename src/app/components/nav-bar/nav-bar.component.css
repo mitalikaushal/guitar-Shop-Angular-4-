@@ -1,4 +1,7 @@
-img {
-    height: 50px;;
-    width: 40px;
+#img {
+    height: 70%;
+    width: 50%;
+}
+nav {
+    height: 40px;
 }

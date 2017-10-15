@@ -9,6 +9,7 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class DataService {
   guitars:Guitar[];
+  guitar:Guitar;
   
   constructor() { 
     this.guitars = [
@@ -80,6 +81,11 @@ export class DataService {
   //sending products when called
   getData(){
     return this.guitars;
+  }
+  //getting the index and will pass whole object of that index
+  getSpecificData(index){
+    this.guitar = this.guitars[index];
+    return this.guitar;
   }
   
 }

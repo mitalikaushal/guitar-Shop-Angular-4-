@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+      <h3 style="text-align:center;">Image</h3>
+      <div>
+          <img src={{guitar.image_path}}>
+      </div>
+      <hr>
+      <h1 style="text-align:center;">Confirmation</h1>
+      <p><strong>Order: #{{randomNumber}}</strong></p>
+      <p><strong>Shipping Details: </strong>{{guitar.shipping_details}}</p>
+      <p><strong>Final Price: </strong>{{guitar.price}}</p>
+    </div>    
+    <div class="col-lg-2">
+    </div> 
+    <a style="margin-left:80%" routerLink = "/" class="btn btn-success"><i class="fa fa-home" aria-hidden="true"></i>Go to Home</a>
+    
+  </div>
+</div>

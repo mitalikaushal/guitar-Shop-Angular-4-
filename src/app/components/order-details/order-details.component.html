@@ -1,9 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-6" id="image">
+      <h2>Guitar Image: </h2>
       <img src={{guitar.image_path}}>
     </div>
     <div class="col-lg-6">
+      <h2 >Description:</h2>
+      <br>
       {{guitar.product_description}}
     </div>
   </div>
@@ -11,50 +14,61 @@
     <div class="col-3"></div>
     <div class="col-6">
       <div class="card">
-        <div class="card-header">
-          PURCHASE FORM
+        <div  *ngIf = "!onClickReview" class="card-header" style="background-color:lightgrey">
+          <strong>PURCHASE FORM</strong>
         </div>
-        <div class="card-block">
-          <form>
+        <div class="card-block" style="background-color:rgb(175, 163, 163)">
+          <form *ngIf = "!onClickReview">
             <div class="form-group row">
-              <label for="firstName" class="col-form-label">First Name</label>
+              <label for="firstName" class="col-form-label">First Name: </label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                <input type="text" class="form-control" name="firstname" [(ngModel)]="client.firstname" id="firstName" placeholder="First Name">
               </div>
             </div>
             <div class="form-group row">
-              <label for="lastName" class="col-form-label">Last Name</label>
+              <label for="lastName" class="col-form-label">Last Name: </label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                <input type="text" class="form-control" name="lastname" [(ngModel)]="client.lastname" id="lastName" placeholder="Last Name" >
               </div>
             </div>
             <div class="form-group row">
-              <label for="creditCard" class="col-form-label">Credit Card</label>
+              <label for="creditCard" class="col-form-label">Credit Card: </label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="creditCard" placeholder="Credit Card">
+                <input type="text" class="form-control" name="cc" [(ngModel)]="client.cc" id="creditCard" placeholder="Credit Card">
               </div>
             </div>
             <div class="form-group row">
-              <label for="email" class="col-form-label">Email</label>
+              <label for="email" class="col-form-label">Email: </label>
               <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" placeholder="Email">
+                <input type="email" class="form-control" name="email" [(ngModel)]="client.email" id="email" placeholder="Email">
               </div>
             </div>
             <div class="form-group row">
-                <label for="phone" class="col-form-label">Phone</label>
-                <div class="col-sm-10">
-                  <input type="number" class="form-control" id="phone" placeholder="phone">
-                </div>
+              <label for="phone" class="col-form-label">Phone: </label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" name="phone" [(ngModel)]="client.phone" id="phone" placeholder="phone">
               </div>
+            </div>
             <div class="form-group row">
               <div class="col-sm-10">
-                <button type="button" class="btn btn-secondary btn-lg">Go to Review</button>
+                <button type="button" class="btn btn-secondary btn-lg" (click) = "onClickReview = !onClickReview">Go to Review</button>
               </div>
-            </div>                
+            </div>  
           </form>
+           <!--On click on review form should be repaced by this:- --> 
+          <div class="review" *ngIf = "onClickReview">
+            <h2 style="text-align:center;">Purchase Order Info: </h2>
+            <br>
+            <p><strong>Name: </strong>{{client.firstname}} {{client.lastname}} </p>
+            <p><strong>Credit Card: </strong>{{client.cc}} </p>
+            <p><strong>Email: </strong>{{client.email}} </p>
+            <p><strong>Phone No: </strong>{{client.phone}} </p>
+            <hr>
+            <button class="btn btn-danger" (click) = "onClickReview = !onClickReview">Edit</button>
+            <button [routerLink] = "['/confirmation/'+index]" class="btn btn-success float-right" >Buy</button>
+          </div>
         </div>
       </div>
-    </div>
     <div class="col-3"></div>
   </div>
 </div>
